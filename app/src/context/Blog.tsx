@@ -1,4 +1,4 @@
-import { Idl, Program, AnchorProvider as Provider } from "@project-serum/anchor";
+import { Idl, Program, Provider } from "@project-serum/anchor";
 import { useAnchorWallet, useConnection } from "@solana/wallet-adapter-react";
 import { Keypair, PublicKey, SystemProgram } from "@solana/web3.js";
 import {
@@ -18,7 +18,7 @@ import { getRandomName } from "src/functions/getRandomName";
 import idl from "src/idl.json";
 
 const PROGRAM_KEY = new PublicKey(idl.metadata.address);
-const BLOG_KEY = new PublicKey("FbuVYiLywo4tqWszoUcvKkHxHjaEegxQ2WXPWgLzHPp1");
+const BLOG_KEY = new PublicKey("Gx7dKodSkhsbEvrXtVVECdC6a4sPb22iB3pCSmcVqBBp");
 
 // create unique user key
 export const getUserKey = (walletKey: PublicKey) => {

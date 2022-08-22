@@ -1,6 +1,6 @@
 {
-  "version": "0.1.0",
-  "name": "blog",
+  "version": "0.0.0",
+  "name": "blog_sol",
   "instructions": [
     {
       "name": "initBlog",
@@ -17,7 +17,7 @@
         },
         {
           "name": "authority",
-          "isMut": true,
+          "isMut": false,
           "isSigner": true
         },
         {
@@ -38,7 +38,7 @@
         },
         {
           "name": "authority",
-          "isMut": true,
+          "isMut": false,
           "isSigner": true
         },
         {
@@ -103,7 +103,7 @@
         },
         {
           "name": "authority",
-          "isMut": true,
+          "isMut": false,
           "isSigner": true
         },
         {
@@ -124,7 +124,32 @@
       ]
     },
     {
-      "name": "detelePost",
+      "name": "updatePost",
+      "accounts": [
+        {
+          "name": "postAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "authority",
+          "isMut": false,
+          "isSigner": true
+        }
+      ],
+      "args": [
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "content",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "deletePost",
       "accounts": [
         {
           "name": "postAccount",
@@ -133,6 +158,27 @@
         },
         {
           "name": "nextPostAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "authority",
+          "isMut": false,
+          "isSigner": true
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "deleteLatestPost",
+      "accounts": [
+        {
+          "name": "postAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "blogAccount",
           "isMut": true,
           "isSigner": false
         },
@@ -236,6 +282,6 @@
     }
   ],
   "metadata": {
-    "address": "FbuVYiLywo4tqWszoUcvKkHxHjaEegxQ2WXPWgLzHPp1"
+    "address": "JD5zKV5JvZHXAyF59y5C9kBR7epqGdzFHBvTpPFpwvpy"
   }
 }
